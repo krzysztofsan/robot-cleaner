@@ -13,6 +13,11 @@
   },
   "jest": {
     "verbose": true,
-    "testMatch": ["**/*.spec.js"]
+    "testMatch": [
+      "**/*.spec.js"
+    ]
+  },
+  "dependencies": {
+    "lodash": "4.17.15"
   }
 }
