@@ -34,6 +34,29 @@ describe("Robot", () => {
         expect(robot.clean(config)).toEqual("=> Cleaned: 2");
     });
 
+    it("should display a correct cleaning report for a non coliding path", () => {
+        const config = {
+            x: 0,
+            y: 0,
+            stepsCount: 4,
+            steps: [{
+                direction: "N",
+                distance: 2
+            }, {
+                direction: "W",
+                distance: 2
+            }, {
+                direction: "N",
+                distance: 2
+            }, {
+                direction: "E",
+                distance: 2
+            }]
+        };
+
+        expect(robot.clean(config)).toEqual("=> Cleaned: 9");
+    });
+
     it("should include only unique places in the cleaning report", () => {
         const config = {
             x: 0,
