@@ -8,18 +8,12 @@ describe("File loader", () => {
         expect(() => fileLoader.loadConfig(filePath)).toThrow();
     });
 
-    it("should fail on loading an invalid file", () => {
-        const filePath = path.resolve("./configs/mocks/invalid-config.conf");
-
-        expect(() => fileLoader.loadConfig(filePath)).toThrow();
-    });
-
     it("should load a simple short configuration file", () => {
         const filePath = path.resolve("./configs/mocks/sample-config.conf");
         const expectedConfig = {
             x: 10,
             y: 22,
-            stepCount: 2,
+            stepsCount: 2,
             steps: [{
                 direction: "E",
                 distance: 2
